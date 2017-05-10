@@ -1,0 +1,72 @@
+@mixin bates-background-color($primary_color){
+  background-color: $primary_color;
+}
+
+@mixin bates-color($primary_color){
+  color: $primary_color;
+}
+
+@mixin background-opacity($color, $opacity) {
+    background-color: $color; /* The Fallback */
+    background-color: rgba($color, $opacity);
+}
+
+@mixin background-gradient-fade($color, $opacity){
+  background: -moz-linear-gradient(top, rgba($color,0) 60%, rgba($color,$opacity) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(60%, rgba($color,0)), color-stop(100%, rgba($color,$opacity)));
+  background: -webkit-linear-gradient(top, rgba($color,0) 60%, rgba($color,$opacity) 100%);
+  background: -o-linear-gradient(top, rgba($color,0) 60%, rgba($color,$opacity) 100%);
+  background: -ms-linear-gradient(top, rgba($color,0) 60%, rgba($color,$opacity) 100%);
+  background: linear-gradient(to bottom, rgba($color,0) 60%, rgba($color,$opacity) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color', endColorstr='$color', GradientType=0 );
+}
+
+.bates-dark-blue-background {
+  @include bates-background-color($bates_dark_blue);
+}
+.bates-regular-blue-background {
+  @include bates-background-color($bates_regular_blue);
+}
+
+.bates-green-background {
+  @include bates-background-color($bates_green);
+}
+.bates-yellow-background {
+  @include bates-background-color($bates_yellow);
+}
+.bates-red-background {
+  @include bates-background-color($bates_red);
+}
+
+.bates-white-haze-background {
+  @include bates-background-color($bates_white_haze);
+}
+
+.bates-white-stone-background {
+  @include bates-background-color($bates_white_stone);
+}
+
+.bates-dark-blue-color {
+  @include bates-color($bates_dark_blue);
+}
+.bates-regular-blue-color {
+  @include bates-color($bates_regular_blue);
+}
+
+.bates-green-color {
+  @include bates-color($bates_green);
+}
+.bates-yellow-color {
+  @include bates-color($bates_yellow);
+}
+.bates-red-color {
+  @include bates-color($bates_red);
+}
+
+.bates-white-haze-color {
+  @include bates-color($bates_white_haze);
+}
+
+.bates-white-stone-color {
+  @include bates-color($bates_white_stone);
+}

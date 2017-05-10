@@ -1,0 +1,40 @@
+@mixin bates-hover-mod($modHeight){
+    position: relative;
+    height: 100%;
+    .fig-hover{
+      position: relative;
+      height: $modHeight;
+      width: 100%;
+      .figure-img{
+        position: absolute;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        opacity: 0.22;
+        transition: all ease-in 0.3s;
+      }
+      .figure-caption{
+        position: relative;
+        width: 100%;
+        z-index: 25;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        text-align: center;
+        color: $bates_white_stone;
+        padding: 0px 10px;
+        .bates-button{
+          width: 75%;
+          margin: 10px;
+        }
+      }
+      &:hover{
+        .figure-img{
+          opacity: 0.55;
+          transition: all ease-in 0.3s;
+        }
+      }
+    }
+
+}

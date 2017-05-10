@@ -1,0 +1,75 @@
+//Bates Background Colors
+@mixin bates-buttons($primary_color){
+  background-color: $primary_color;
+  color: $bates_white_stone;
+  text-shadow: 0px 1px 1px darken($primary_color, 10%);
+  transition: all ease-in 0.3s;
+  &:hover, &:active, &:focus{
+    background-color: lighten($primary_color, 10);
+    text-shadow: none;
+    transition: all ease-in 0.3s;
+  }
+  &.hollow{
+    border: 3px solid $primary_color;
+    color: $primary_color;
+    text-shadow: none;
+    &:hover, &:active, &:focus{
+      background-color: $primary_color;
+      color: $bates_white_stone;
+      border: 3px solid $primary_color;
+      text-shadow: 0px 1px 1px darken($primary_color, 10%);
+    }
+  }
+}
+
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Open Sans', sans-serif;
+}
+
+p{
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+.bates-button{
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 1rem 0;
+  padding: 0.85em 1em;
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.bates-rounded{
+  border-radius: 5px;
+}
+
+.bates-dark-blue-button {
+  @include bates-buttons($bates_dark_blue);
+}
+.bates-regular-blue-button {
+  @include bates-buttons($bates_regular_blue);
+}
+
+.bates-green-button {
+  @include bates-buttons($bates_green);
+}
+.bates-yellow-button {
+  @include bates-buttons($bates_yellow);
+}
+.bates-red-button {
+  @include bates-buttons($bates_red);
+}
+
+.hollow{
+  background-color: transparent;
+}

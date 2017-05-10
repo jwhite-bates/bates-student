@@ -1,0 +1,30 @@
+//Bates Base Color Variables
+$bates_dark_blue: #00374e;
+$bates_regular_blue: #005978;
+$bates_white_haze: #f6f6f7;
+$bates_white_stone: #fbfbfc;
+$bates_green: #56a964;
+$bates_red: #9e2120;
+$bates_yellow: #ffcf3a;
+$bates_black: #2f2f2f;
+
+@import "bates-framework/scss/buttons";
+@import "bates-framework/scss/typography";
+@import "bates-framework/scss/colors";
+@import "bates-framework/scss/imgHovers";
+@import "bates-framework/scss/cards";
+@import "bates-framework/scss/iframe";
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.img-hover-mod{
+  @include bates-hover-mod(300px);
+}
+
+
+
+//Add additional styles here

@@ -1,0 +1,19 @@
+//Add Bootstrap Framework
+@import "bootstrap.min";
+//Add IE fallback for Flexbox elements
+@import "ie";
+//Add Bates Framework
+@import "bates-framework/batesFramework";
+
+//Add Global Styles
+@import "global";
+//Add Sectional Styles
+@import "navbar";
+// @import "main";
+@import "hero";
+@import "contactbar";
+
+@import "searchbar";
+
+// @import "student-links";
+@import "student-links";

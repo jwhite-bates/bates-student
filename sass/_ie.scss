@@ -1,0 +1,11 @@
+.ie{
+  .welcomeContainer{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .homePageInfo{
+    position: absolute;
+    bottom: 0px;
+  }
+}
